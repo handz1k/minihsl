@@ -11,11 +11,13 @@
   },
   "dependencies": {
     "@apollo/client": "^3.10.5",
+    "@mapbox/mapbox-gl-directions": "^4.3.1",
     "@mapbox/mapbox-gl-geocoder": "^5.0.2",
+    "@mapbox/search-js-react": "^1.0.0-beta.24",
     "dotenv": "^16.4.5",
     "graphql": "^16.8.2",
     "hsl-map-style": "github:HSLdevcom/hsl-map-style",
-    "mapbox-gl": "^3.4.0",
+    "mapbox-gl": "^3.9.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "yarn": "^1.22.22"

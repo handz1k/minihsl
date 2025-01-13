@@ -1,5 +1,5 @@
-import React, { useRef, useEffect, useState } from "react";
-import mapboxgl from "mapbox-gl";
+import { useRef, useEffect } from "react";
+import mapboxgl from "mapbox-gl"
 import { mapStyle } from "../assets/mapStyle";
 
 mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_KEY;
@@ -7,6 +7,7 @@ mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_KEY;
 const InitializeMap = ({ lng, lat, zoom, onMapLoad }) => {
   const mapContainer = useRef(null);
   const map = useRef(null);
+
   useEffect(() => {
     console.log("Initializing map...");
     if (map.current) return;
@@ -23,7 +24,7 @@ const InitializeMap = ({ lng, lat, zoom, onMapLoad }) => {
         },
         trackUserLocation: true,
         showUserHeading: true,
-      })
+      }),
     );
     map.current.on("load", () => {
       onMapLoad(map.current);

@@ -1,12 +1,10 @@
-import { useRef, useEffect, useState } from "react";
+import {useState } from "react";
 import mapboxgl from "mapbox-gl";
-import MapboxGeocoder from "@mapbox/mapbox-gl-geocoder";
 import InitializeMap from "./components/InitializeMap";
 import "@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css";
 import "./App.css";
-import { CITYBIKE_LOCATIONS } from "./graphql/queries";
-import { useQuery } from "@apollo/client";
 import BikeMarkers from "./components/BikeMarkers";
+import LocationSearch from "./components/LocationSearch";
 import useBikeLocationsQuery from "./hooks/useBikeLocationsQuery";
 
 mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_KEY;
@@ -34,7 +32,10 @@ function App() {
         onMapLoad={handleMapLoad}
       />
       {!loading && !error && map && data && (
+        <>
         <BikeMarkers map={map} data={data} />
+        <LocationSearch token={mapboxgl.accessToken} />
+        </>
       )}
     </div>
   );
