@@ -1,6 +1,5 @@
 import { useRef, useEffect } from "react";
 import mapboxgl from "mapbox-gl"
-import { mapStyle } from "../assets/mapStyle";
 
 mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_KEY;
 
@@ -13,7 +12,6 @@ const InitializeMap = ({ lng, lat, zoom, onMapLoad }) => {
     if (map.current) return;
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
-      style: mapStyle,
       center: [lng, lat],
       zoom: zoom,
     });

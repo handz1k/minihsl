@@ -14,6 +14,7 @@
     "@mapbox/mapbox-gl-directions": "^4.3.1",
     "@mapbox/mapbox-gl-geocoder": "^5.0.2",
     "@mapbox/search-js-react": "^1.0.0-beta.24",
+    "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "graphql": "^16.8.2",
     "hsl-map-style": "github:HSLdevcom/hsl-map-style",

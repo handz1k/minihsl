@@ -4,8 +4,8 @@ import InitializeMap from "./components/InitializeMap";
 import "@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css";
 import "./App.css";
 import BikeMarkers from "./components/BikeMarkers";
-import LocationSearch from "./components/LocationSearch";
 import useBikeLocationsQuery from "./hooks/useBikeLocationsQuery";
+
 
 mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_KEY;
 
@@ -34,7 +34,6 @@ function App() {
       {!loading && !error && map && data && (
         <>
         <BikeMarkers map={map} data={data} />
-        <LocationSearch token={mapboxgl.accessToken} />
         </>
       )}
     </div>

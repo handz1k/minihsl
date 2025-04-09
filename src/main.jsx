@@ -6,7 +6,7 @@ import './index.css'
 import {ApolloClient, InMemoryCache, ApolloProvider, createHttpLink,} from '@apollo/client'
 
 const httpLink = createHttpLink({
-  uri: `https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql?digitransit-subscription-key=${import.meta.env.VITE_HSL_KEY}`
+  uri: `https://api.digitransit.fi/routing/v2/hsl/gtfs/v1?digitransit-subscription-key=${import.meta.env.VITE_HSL_KEY}`
 });
 
 const client = new ApolloClient({
